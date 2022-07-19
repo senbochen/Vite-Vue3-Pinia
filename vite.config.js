@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy' //要想为传统浏览器提供支持，
-import vitePluginImp from 'vite-plugin-imp'
+// import vitePluginImp from 'vite-plugin-imp'
 import styleImport, { VantResolve } from 'vite-plugin-style-import';
 import viteCompression from 'vite-plugin-compression'
 import importDynamicModule from 'vite-plugin-dynamic-import-module'
@@ -49,15 +49,22 @@ export default defineConfig({
     vue(),
     styleImport({
       resolves: [VantResolve()],
-    }),
-    vitePluginImp({//组件按需导入
-      libList: [{
-        libName: 'vant',
-        style (name) {
-          return `vant/es/${name}/index`;
+      libs: [
+        {
+          libName: 'vant',
+          esModule: true,
+          resolveStyle: name => `../es/${name}/style`
         }
-      }]
+      ]
     }),
+    // vitePluginImp({//组件按需导入
+    //   libList: [{
+    //     libName: 'vant',
+    //     style (name) {
+    //       return `vant/es/${name}/index`;
+    //     }
+    //   }]
+    // }),
     legacy({
       targets: ['defaults', 'not IE 11']
     }),
