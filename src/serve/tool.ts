@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from "axios";
 
-let tokens = new Map();
+export const tokens = new Map();
 
 export const getKey = (config: AxiosRequestConfig): string => [config.url, config.method].join("&")
 

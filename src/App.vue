@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <van-button plain type="primary" @click="goHome">朴素按钮</van-button>
+    <button @click="add">朴素按钮</button>
 
     <router-view></router-view>
   </div>
@@ -8,21 +8,15 @@
 
 <script setup>
 import http from './serve/index'
-import { useRoute } from 'vue-router'
-const route = useRoute()
+import { debounce, thorret } from './serve/debounce'
 
 const goHome = async () => {
-
-  const response1 = await http.get(
-    "https://jsonplaceholder.typicode.com/todos/1"
-
-  )
-
-
-
-
-
+  const response1 = await http.get("https://jsonplaceholder.typicode.com/todos/1")
 }
+const handleDebounce = thorret(goHome, 3000)
+const add = thorret(goHome, 3000)
+
+
 </script>
 <style>
 .container {

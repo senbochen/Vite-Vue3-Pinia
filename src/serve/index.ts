@@ -1,12 +1,12 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as cancelRequest from "./tool";
-
+import qs from 'qs'
 export class Http {
   public instance: AxiosInstance;
   constructor() {
     this.instance = axios.create({
       baseURL: "/api",
-      withCredentials: true, // 跨域携带 cookie
+      withCredentials: false, // 跨域携带 cookie
     });
     this.interceptors();
   }
@@ -41,6 +41,15 @@ export class Http {
       method: "get",
       url,
       params,
+      ...config,
+    })
+  }
+
+  post(url: string, data: any = {}, config: any = {}) {
+    return this.instance({
+      method: "post",
+      url,
+      data: qs.stringify(data),
       ...config,
     })
   }
