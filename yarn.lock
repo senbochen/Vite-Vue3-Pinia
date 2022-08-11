@@ -427,6 +427,11 @@
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.18.10.tgz#94b5f8522356e69e8277276adf67ed280c90ecc1"
   integrity sha512-TYk3OA0HKL6qNryUayb5UUEhM/rkOQozIBEA5ITXh5DWrSp0TlUQXMyZmnWxG/DizSWBeeQ0Zbc5z8UGaaqoeg==
 
+"@babel/parser@^7.18.9":
+  version "7.18.11"
+  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.18.11.tgz#68bb07ab3d380affa9a3f96728df07969645d2d9"
+  integrity sha512-9JKn5vN+hDt0Hdqn1PiJ2guflwP+B6Ga8qbDuoF0PzzVhrzsKIJo8yGqVk6CmMHiMei9w1C1Bp9IMJSIK+HPIQ==
+
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.17.12":
   version "7.17.12"
   resolved "http://nexus.kfang.com/repository/npm/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/-/plugin-bugfix-safari-id-destructuring-collision-in-function-expression-7.17.12.tgz"
@@ -1401,7 +1406,7 @@
     postcss "^8.1.10"
     source-map "^0.6.1"
 
-"@vue/compiler-sfc@^3.1.2":
+"@vue/compiler-sfc@^3.1.2", "@vue/compiler-sfc@^3.2.37":
   version "3.2.37"
   resolved "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.37.tgz#3103af3da2f40286edcd85ea495dcb35bc7f5ff4"
   integrity sha512-+7i/2+9LYlpqDv+KTtWhOZH+pa8/HnX/905MdVmAcI/mPQOBwkHHIzrsEsucyOIZQYMkXUiTkmZq5am/NyXKkg==
@@ -1437,6 +1442,11 @@
   version "6.1.4"
   resolved "http://nexus.kfang.com/repository/npm/@vue/devtools-api/-/devtools-api-6.1.4.tgz"
   integrity sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==
+
+"@vue/devtools-api@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.2.1.tgz#6f2948ff002ec46df01420dfeff91de16c5b4092"
+  integrity sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==
 
 "@vue/reactivity-transform@3.2.33":
   version "3.2.33"
@@ -1515,7 +1525,7 @@ acorn-walk@^8.2.0:
   resolved "http://nexus.kfang.com/repository/npm/acorn-walk/-/acorn-walk-8.2.0.tgz"
   integrity sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==
 
-acorn@^8.5.0:
+acorn@^8.5.0, acorn@^8.8.0:
   version "8.8.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.0.tgz#88c0187620435c7f6015803f5539dae05a9dbea8"
   integrity sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==
@@ -1629,6 +1639,14 @@ assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "http://nexus.kfang.com/repository/npm/assign-symbols/-/assign-symbols-1.0.0.tgz"
   integrity sha512-Q+JC7Whu8HhmTdBph/Tq59IoRtoy6KAm5zzPv00WdujX82lbAL8K7WVjne7vdCsAmbF4AYaDOPyO3k0kl8qIrw==
+
+ast-walker-scope@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/ast-walker-scope/-/ast-walker-scope-0.2.1.tgz#e96b7a41efed1ed555ac326feff0dae6bd6fa48c"
+  integrity sha512-SBqTj/8RpqNirpJUVj/3I5P3aWMV6CBUD/BXs8Ie7R/TNOnHRVzWWmXF+BDdstjgYMJMT9+ywa8lHXx7lXwegw==
+  dependencies:
+    "@babel/parser" "^7.18.9"
+    "@babel/types" "^7.18.9"
 
 async-each@^1.0.0:
   version "1.0.3"
@@ -2538,7 +2556,7 @@ cheerio@^1.0.0-rc.10:
     parse5 "^7.0.0"
     parse5-htmlparser2-tree-adapter "^7.0.0"
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.0:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.0, chokidar@^3.5.3:
   version "3.5.3"
   resolved "http://nexus.kfang.com/repository/npm/chokidar/-/chokidar-3.5.3.tgz"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -4528,6 +4546,11 @@ less@^4.1.2:
     needle "^2.5.2"
     source-map "~0.6.0"
 
+local-pkg@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.npmjs.org/local-pkg/-/local-pkg-0.4.2.tgz#13107310b77e74a0e513147a131a2ba288176c2f"
+  integrity sha512-mlERgSPrbxU3BP4qBqAvvwlgW4MTg78iwJdGGnv7kibKjWcJksrG3t6LB5lXI93wXRDvG4NpUgJFmTG4T6rdrg==
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "http://nexus.kfang.com/repository/npm/locate-path/-/locate-path-3.0.0.tgz"
@@ -4560,7 +4583,7 @@ lower-case@^2.0.2:
   dependencies:
     tslib "^2.0.3"
 
-magic-string@^0.25.7:
+magic-string@^0.25.7, magic-string@^0.25.9:
   version "0.25.9"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
   integrity sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==
@@ -5132,6 +5155,14 @@ pify@^4.0.1:
   version "4.0.1"
   resolved "http://nexus.kfang.com/repository/npm/pify/-/pify-4.0.1.tgz"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
+
+pinia@^2.0.17:
+  version "2.0.17"
+  resolved "https://registry.npmjs.org/pinia/-/pinia-2.0.17.tgz#f925e5e4f73c15e16dfb4838176a9ca50752f26b"
+  integrity sha512-AtwLwEWQgIjofjgeFT+nxbnK5lT2QwQjaHNEDqpsi2AiCwf/NY78uWTeHUyEhiiJy8+sBmw0ujgQMoQbWiZDfA==
+  dependencies:
+    "@vue/devtools-api" "^6.2.1"
+    vue-demi "*"
 
 pirates@^4.0.5:
   version "4.0.5"
@@ -5992,6 +6023,39 @@ universalify@^2.0.0:
   resolved "http://nexus.kfang.com/repository/npm/universalify/-/universalify-2.0.0.tgz"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
+unplugin-vue-define-options@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.npmjs.org/unplugin-vue-define-options/-/unplugin-vue-define-options-0.7.3.tgz#5b932eb93b4467117d14f5daa4d1983bea5d8cd2"
+  integrity sha512-VbexYR8m2v/TLi49+F7Yf3rO2EyS0EkrXjJxqym6W0NxOzom9zdmRUR+av4UAu4GruhMumJc/9ITS1Wj+rozjg==
+  dependencies:
+    "@rollup/pluginutils" "^4.2.1"
+    "@vue/compiler-sfc" "^3.2.37"
+    unplugin "^0.8.0"
+
+unplugin-vue-macros@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.npmjs.org/unplugin-vue-macros/-/unplugin-vue-macros-0.7.3.tgz#208386c2261385fbec59aa9812fec1cd6e8189e0"
+  integrity sha512-nFeVjV3X6s5nEIC4E0obcDen6KouBq/nv8JNv63h1m1rJoYk2VhdHd6bnyt74uSc1ZaWfxxNlszXIk7iW9YSmw==
+  dependencies:
+    "@babel/generator" "^7.18.10"
+    "@rollup/pluginutils" "^4.2.1"
+    "@vue/compiler-sfc" "^3.2.37"
+    ast-walker-scope "^0.2.1"
+    local-pkg "^0.4.2"
+    magic-string "^0.25.9"
+    unplugin "^0.8.0"
+    unplugin-vue-define-options "^0.7.3"
+
+unplugin@^0.8.0:
+  version "0.8.1"
+  resolved "https://registry.npmjs.org/unplugin/-/unplugin-0.8.1.tgz#4517b6a8ec3d944e838f9c346921d9777cd159e1"
+  integrity sha512-o7rUZoPLG1fH4LKinWgb77gDtTE6mw/iry0Pq0Z5UPvZ9+HZ1/4+7fic7t58s8/CGkPrDpGq+RltO+DmswcR4g==
+  dependencies:
+    acorn "^8.8.0"
+    chokidar "^3.5.3"
+    webpack-sources "^3.2.3"
+    webpack-virtual-modules "^0.4.4"
+
 unquote@~1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"
@@ -6213,6 +6277,11 @@ vite@^3.0.4:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-demi@*:
+  version "0.13.6"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.13.6.tgz#f9433cbd75e68a970dec066647f4ba6c08ced48f"
+  integrity sha512-02NYpxgyGE2kKGegRPYlNQSL1UWfA/+JqvzhGCOYjhfbLWXU5QQX0+9pAm/R2sCOPKr5NBxVIab7fvFU0B1RxQ==
+
 vue-router@4:
   version "4.0.13"
   resolved "http://nexus.kfang.com/repository/npm/vue-router/-/vue-router-4.0.13.tgz"
@@ -6237,6 +6306,16 @@ vue@^3.2.33:
     "@vue/runtime-dom" "3.2.33"
     "@vue/server-renderer" "3.2.33"
     "@vue/shared" "3.2.33"
+
+webpack-sources@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
+  integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
+
+webpack-virtual-modules@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.npmjs.org/webpack-virtual-modules/-/webpack-virtual-modules-0.4.4.tgz#a19fcf371923c59c4712d63d7d194b1e4d8262cc"
+  integrity sha512-h9atBP/bsZohWpHnr+2sic8Iecb60GxftXsWNLLLSqewgIsGzByd2gcIID4nXcG+3tNe4GQG3dLcff3kXupdRA==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
