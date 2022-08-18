@@ -11,7 +11,8 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "types": [
-      "unplugin-vue-define-options" /* ... */
+      "unplugin-vue-define-options", /* ... */
+      "element-plus/global"
     ],
     "lib": [
       "esnext",

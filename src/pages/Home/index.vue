@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>我是首页</h1>
-  </div>
+  <div></div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'

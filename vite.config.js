@@ -7,7 +7,9 @@ import DefineOptions from 'unplugin-vue-define-options/vite' //使用组件名�
 import importDynamicModule from 'vite-plugin-dynamic-import-module' //支持带变量的动态导入模块。
 import dynamicImport from 'vite-plugin-dynamic-import' //增强Vite 包含动态导入。
 import { resolve } from 'path'
-
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import viteCompression from 'vite-plugin-compression' //使用 gzip 或 brotli 压缩资源。
 
 export default defineConfig({
@@ -18,12 +20,13 @@ export default defineConfig({
     https: false,
     strictPort: true,
     proxy: {
-      "/kfang": {
-        target: "http://git.kfang.com/",
+      '/web-oms': {
+        target: 'https://test-omsinfra.kfang.com/',
         changeOrigin: true
       },
     },
   },
+
   esbuild: {
     jsxFactory: 'h',
     jsxFragment: 'Fragment'
@@ -43,7 +46,13 @@ export default defineConfig({
     importDynamicModule(),
     dynamicImport(),
     svgPlugin(),
-    DefineOptions()
+    DefineOptions(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
   ],
   build: {
     outDir: 'dist',

@@ -24,6 +24,7 @@ export const add = (config: Config) => {
 }
 export const remove = (config: Config) => {
   const pendingKey = getKey(config);
+
   if (tokens.has(pendingKey)) {
     const cancelToken = tokens.get(pendingKey);
     cancelToken.abort();

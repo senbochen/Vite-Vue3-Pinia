@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
+import { announceSendStatus } from '@/api/index'
 
-import { mande } from 'mande'
-
-const api = mande('/api/users')
 interface UserInfo {
   name: string
   age: number
@@ -40,7 +38,8 @@ const useStore = defineStore('family', {
   actions: {
     async registerUser(login: string, password: string) {
       try {
-        this.userList = await api.post({ login, password })
+        console.log(login, password, this.userList, announceSendStatus())
+        await announceSendStatus()
 
       } catch (error) {
 

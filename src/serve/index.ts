@@ -1,11 +1,14 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as cancelRequest from "./tool";
+
 import qs from 'qs'
-export class Http {
+import { ElMessage } from 'element-plus'
+
+import * as cancelRequest from "./tool";
+class Http {
   public instance: AxiosInstance;
   constructor() {
     this.instance = axios.create({
-      baseURL: "/api",
+      baseURL: "",
       withCredentials: false, // 跨域携带 cookie
     });
     this.interceptors();
@@ -14,8 +17,12 @@ export class Http {
   interceptors() {
     this.instance.interceptors.request.use(
       (config: any) => {
-        cancelRequest.remove(config); // 取消上一次当前路径的请求
-        cancelRequest.add(config); // 添加这次路径的请求
+        debugger
+        if (cancelRequest.tokens.has(cancelRequest.getKey(config))) {
+          cancelRequest.remove(config); // 取消上一次当前路径的请求
+        } else {
+          cancelRequest.add(config); // 添加这次路径的请求
+        }
         return config;
       },
       (error) => Promise.reject(error)
@@ -24,13 +31,18 @@ export class Http {
     // 响应拦截器
     this.instance.interceptors.response.use(
       (response) => {
-        cancelRequest.remove(response.config); // 成功后再取消一次
-
+        if (cancelRequest.tokens.has(cancelRequest.getKey(response.config))) {
+          cancelRequest.remove(response.config); // 取消上一次当前路径的请求
+        }
+        console.log(response)
+        ElMessage('请求成功~')
         return response;
       },
       (error) => {
         // cancelRequest 取消请求后会抛出 catch 错误， axios.isCancel 判断不是手动取消的错误则调用 errTip 提示
         // !axios.isCancel(error) && errTip(error?.response?.status, error?.response?.data?.message);
+        console.log(error)
+        ElMessage(JSON.stringify(error))
         return Promise.reject(error);
       }
     );
@@ -56,9 +68,10 @@ export class Http {
 
 
   request(options: AxiosRequestConfig) {
-    // 测试
     this.instance(options)
   }
 }
 
-export default new Http();
+const { request, post, get } = new Http().instance
+
+export { request, post, get }
