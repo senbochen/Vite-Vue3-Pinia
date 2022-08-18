@@ -34,6 +34,7 @@
     "axios": "^0.27.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "commitizen": "^4.2.5",
     "element-plus": "^2.2.13",
     "husky": "^8.0.1",
     "koa": "^2.13.4",
@@ -73,5 +74,10 @@
     "src/**/*.{js,jsx,vue,ts,tsx}": [
       "eslint --fix --max-warnings 0"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
