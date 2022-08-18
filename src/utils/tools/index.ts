@@ -11,8 +11,6 @@ export const debounce = (fun: Function, delay: number) => {
   }
 }
 
-
-
 //节流函数
 export const thorret = function throttle(fun: Function, time: number) {
   let t1 = 0 //初始时间

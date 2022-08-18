@@ -16,13 +16,12 @@ export default defineComponent({
         }
       }, 5000)
     })
-    p.then((result) => {
+    p.then(result => {
       console.log(result)
-    }).catch((reject) => {
+    }).catch(reject => {
       console.log(reject)
     })
-  }
+  },
 })
 </script>
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

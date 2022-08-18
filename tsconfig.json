@@ -10,23 +10,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "types": [
-      "unplugin-vue-define-options", /* ... */
-      "element-plus/global"
-    ],
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "types": ["unplugin-vue-define-options" /* ... */, "element-plus/global"],
+    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "baseUrl": "",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "#/*": [
-        "types/*"
-      ]
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
     }
   },
   "include": [
@@ -39,7 +29,5 @@
     "build/**/*.d.ts",
     "vite.config.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -31,14 +31,15 @@ import { computed } from 'vue-demi'
 defineOptions({
   name: 'App',
   components: {
-    CButton
-  }
+    CButton,
+  },
 })
 
 const useStoreState = useStore()
 const userList = computed(() => useStoreState.userList)
 const nameList = computed(() => useStoreState.nameList)
 const add = () => {
+  console.log(1231)
   useStoreState.registerUser('121231', '21313')
 }
 </script>

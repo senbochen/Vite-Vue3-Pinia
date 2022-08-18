@@ -22,14 +22,14 @@ export default defineConfig({
     proxy: {
       '/web-oms': {
         target: 'https://test-omsinfra.kfang.com/',
-        changeOrigin: true
+        changeOrigin: true,
       },
     },
   },
 
   esbuild: {
     jsxFactory: 'h',
-    jsxFragment: 'Fragment'
+    jsxFragment: 'Fragment',
   },
   resolve: {
     alias: {
@@ -40,7 +40,7 @@ export default defineConfig({
     vueJsx(),
     vue(),
     legacy({
-      targets: ['defaults', 'not IE 11']
+      targets: ['defaults', 'not IE 11'],
     }),
     viteCompression(),
     importDynamicModule(),
@@ -56,6 +56,6 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
-  }
+    assetsDir: 'assets',
+  },
 })
