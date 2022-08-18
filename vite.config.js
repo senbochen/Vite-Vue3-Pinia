@@ -30,14 +30,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      vue: "vue/dist/vue.esm-bundler.js",
       '@': resolve(__dirname, 'src'),
-      entries: [
-        {
-          find: '@',
-          replacement: resolve(__dirname, 'src'),
-        },
-      ]
     },
   },
   plugins: [
@@ -55,9 +48,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
-  },
-  preview: {
-    port: 9090,
-    strictPort: true, //设置为 true 时，如果端口已被使用，则直接退出，而不会再进行后续端口的尝试。
   }
 })

@@ -24,4 +24,3 @@ export const thorret = function throttle(fun: Function, time: number) {
     }
   }
 }
-

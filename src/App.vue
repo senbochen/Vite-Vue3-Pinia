@@ -1,16 +1,26 @@
 <template>
   <div class="container">
     <c-button @click="add" type="color">朴素按钮</c-button>
-
+    <ul>
+      <li v-for="item in userList">
+        <p>{{ item.name }}</p>
+        <p>{{ item.age }}</p>
+      </li>
+    </ul>
+    <ul>
+      <li v-for="item in nameList">
+        <p>{{ item }}</p>
+      </li>
+    </ul>
     <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts" setup>
 import http from './serve/index'
-import { debounce, thorret } from './serve/debounce'
 import CButton from '@/components/Button/index.vue'
-
+import useStore from '@/stores/family/index'
+import { computed } from 'vue-demi'
 defineOptions({
   name: 'App',
   components: {
@@ -18,16 +28,13 @@ defineOptions({
   }
 })
 
-const goHome = async () => {
-  console.log(import.meta.env.VITE_SOME_KEY)
-  const response1 = await http.get(
-    'https://jsonplaceholder.typicode.com/todos/1'
-  )
+const useStoreState = useStore()
+const userList = computed(() => useStoreState.userList)
+const nameList = computed(() => useStoreState.nameList)
+const add = () => {
+  useStoreState.registerUser('121231', '21313')
+  console.log('useStoreState', userList)
 }
-
-const a = 1
-const handleDebounce = thorret(goHome, 3000)
-const add = thorret(goHome, 3000)
 </script>
 <style>
 .container {

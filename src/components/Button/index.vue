@@ -34,4 +34,7 @@ console.log(props)
 </template>
 
 <style lang="less" scoped>
+.color {
+  background-color: aqua;
+}
 </style>

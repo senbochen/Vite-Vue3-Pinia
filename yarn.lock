@@ -4605,6 +4605,11 @@ make-dir@^2.0.0, make-dir@^2.1.0:
     pify "^4.0.1"
     semver "^5.6.0"
 
+mande@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/mande/-/mande-2.0.3.tgz#48288ea2089a21af30891590d96cdfba5c0352ed"
+  integrity sha512-rWIgfcpx6nlUHDOQbHu9dSYFxib3hV85lo7KnoA7T+uBRLiSM6dy00M/+NABNkDCVgJNcm8Ib4nobLfERhrvxA==
+
 map-cache@^0.2.2:
   version "0.2.2"
   resolved "http://nexus.kfang.com/repository/npm/map-cache/-/map-cache-0.2.2.tgz"
