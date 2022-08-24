@@ -106,7 +106,5 @@
     "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
   },
   "vetur.validation.script": false,
-  "settingsSync.ignoredExtensions": [
-
-  ],
+  "settingsSync.ignoredExtensions": []
 }
