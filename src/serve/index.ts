@@ -63,6 +63,6 @@ class Http {
   }
 }
 
-const { request, post, get } = new Http().instance
+const { get, post, request } = new Http().instance
 
-export { request, post, get }
+export { get, post, request }

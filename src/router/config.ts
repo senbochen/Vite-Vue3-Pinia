@@ -1,22 +1,18 @@
-import Home from '@/pages/Home/index.vue'
-import Car from '@/pages/Car/index.vue'
-import Product from '@/pages/Product/index.vue'
-
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('@/pages/Home/index.vue'),
   },
   {
     path: '/car',
     name: 'Car',
-    component: Car,
+    component: () => import('@/pages/Car/index.vue'),
   },
   {
     path: '/product',
     name: 'Product',
-    component: Product,
+    component: () => import('@/pages/Product/index.vue'),
   },
 ]
 

@@ -1,31 +1,20 @@
 <template>
   <div class="container">
     <c-button @click="add" type="color">朴素按钮</c-button>
-    <!-- <ul>
-      <li v-for="item in userList">
-        <p>{{ item.name }}</p>
-        <p>{{ item.age }}</p>
-      </li>
-    </ul>
-    <ul>
-      <li v-for="item in nameList">
-        <p>{{ item }}</p>
-      </li>
-    </ul> -->
     <router-view></router-view>
   </div>
-  <!-- <el-row class="mb-4">
+  <el-row class="mb-4">
     <el-button>Default</el-button>
     <el-button type="primary">Primary</el-button>
     <el-button type="success">Success</el-button>
     <el-button type="info">Info</el-button>
     <el-button type="warning">Warning</el-button>
     <el-button type="danger">Danger</el-button>
-  </el-row> -->
+  </el-row>
 </template>
 
 <script lang="ts" setup>
-import useStore from '@/stores/family/index'
+import useStore from '@/stores/modules/family'
 import CButton from '@/components/Button/index.vue'
 import { computed } from 'vue'
 defineOptions({
