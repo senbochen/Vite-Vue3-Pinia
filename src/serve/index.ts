@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 
 import qs from 'qs'
 import { ElMessage } from 'element-plus'
-
+import handleNetworkError from './error'
 import * as cancelRequest from './tool'
 class Http {
   public instance: AxiosInstance
@@ -34,7 +34,7 @@ class Http {
       },
       (error) => {
         console.log(error)
-        ElMessage({ type: 'error', message: '请求失败' })
+        handleNetworkError(error.response.status)
         return Promise.reject(error)
       }
     )
