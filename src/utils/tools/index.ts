@@ -1,5 +1,5 @@
 //防抖函数
-export const debounce = (fun: Function, delay: number) => {
+export const debounce = (fun: any, delay: number) => {
   let timer: any
   return function (this: any) {
     if (timer) {
@@ -12,10 +12,10 @@ export const debounce = (fun: Function, delay: number) => {
 }
 
 //节流函数
-export const thorret = function throttle(fun: Function, time: number) {
+export const thorret = function throttle(fun: any, time: number) {
   let t1 = 0 //初始时间
   return function (this: any) {
-    let t2: any = new Date() //当前时间
+    const t2: any = new Date() //当前时间
     if (t2 - t1 > time) {
       fun.apply(this, arguments)
       t1 = t2

@@ -33,7 +33,7 @@ const useStore = defineStore('family', {
   },
   getters: {
     nameList: (state): string[] => {
-      return state.userList.map(res => res.name)
+      return state.userList.map((res) => res.name)
     },
   },
   actions: {

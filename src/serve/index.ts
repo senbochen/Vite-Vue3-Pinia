@@ -21,18 +21,18 @@ class Http {
         cancelRequest.add(config)
         return config
       },
-      error => Promise.reject(error)
+      (error) => Promise.reject(error)
     )
 
     // 响应拦截器
     this.instance.interceptors.response.use(
-      response => {
+      (response) => {
         cancelRequest.remove(response.config)
         console.log(response)
         ElMessage({ type: 'success', message: '请求成功' })
         return response
       },
-      error => {
+      (error) => {
         console.log(error)
         ElMessage({ type: 'error', message: '请求失败' })
         return Promise.reject(error)

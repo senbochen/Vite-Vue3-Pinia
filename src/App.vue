@@ -25,14 +25,12 @@
 </template>
 
 <script lang="ts" setup>
-import CButton from '@/components/Button/index.vue'
 import useStore from '@/stores/family/index'
-import { computed } from 'vue-demi'
+import CButton from '@/components/Button/index.vue'
+import { computed } from 'vue'
 defineOptions({
   name: 'App',
-  components: {
-    CButton,
-  },
+  components: { CButton },
 })
 
 const useStoreState = useStore()

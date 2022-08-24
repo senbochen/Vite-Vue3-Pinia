@@ -6,7 +6,12 @@ interface Config extends AxiosRequestConfig {
 }
 
 export const getKey = (config: Config): string =>
-  [config.url, config.method, qs.stringify(config.params), qs.stringify(config.data)].join('&')
+  [
+    config.url,
+    config.method,
+    qs.stringify(config.params),
+    qs.stringify(config.data),
+  ].join('&')
 
 export const add = (config: Config) => {
   const pendingKey = getKey(config)

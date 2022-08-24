@@ -1,9 +1,17 @@
-<script lang="ts" setup>
-import { ref } from 'vue'
-const ButtonTypes = ['default', 'primary', 'success', 'warning', 'info', 'danger', 'text'] as const
+<script setup lang="ts">
 defineOptions({
   name: 'CButton',
 })
+import { defineProps } from 'vue'
+const ButtonTypes = [
+  'default',
+  'primary',
+  'success',
+  'warning',
+  'info',
+  'danger',
+  'text',
+]
 
 const props = defineProps({
   type: {
@@ -14,7 +22,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :class="[type]" v-bind="$attrs"><slot></slot></button>
+  <button :class="[type]" v-bind="$attrs">
+    <slot></slot>
+  </button>
 </template>
 
 <style lang="less" scoped>

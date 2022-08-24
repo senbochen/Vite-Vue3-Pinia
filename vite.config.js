@@ -39,6 +39,7 @@ export default defineConfig({
   plugins: [
     vueJsx(),
     vue(),
+    DefineOptions(),
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
@@ -46,7 +47,7 @@ export default defineConfig({
     importDynamicModule(),
     dynamicImport(),
     svgPlugin(),
-    DefineOptions(),
+
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
