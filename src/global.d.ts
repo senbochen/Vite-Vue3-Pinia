@@ -5,6 +5,3 @@ declare module 'pinia' {
     suffix: ''
   }
 }
-
-declare module 'DefineOptions'
-declare module 'http'
