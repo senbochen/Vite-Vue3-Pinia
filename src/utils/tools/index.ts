@@ -22,3 +22,5 @@ export const thorret = function throttle(fun: any, time: number) {
     }
   }
 }
+
+// 1、对象分为函数对象和普通对象，prototype 属性是函数独有的属性

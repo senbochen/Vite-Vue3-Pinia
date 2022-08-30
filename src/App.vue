@@ -16,6 +16,7 @@
 <script lang="ts" setup>
 import useStore from '@/stores/modules/family'
 import CButton from '@/components/Button/index.vue'
+import { useRouter } from 'vue-router'
 import { computed } from 'vue'
 defineOptions({
   name: 'App',
@@ -25,8 +26,10 @@ defineOptions({
 const useStoreState = useStore()
 const userList = computed(() => useStoreState.userList)
 const nameList = computed(() => useStoreState.nameList)
+const route = useRouter()
 const add = () => {
   console.log(1231)
+  route.push('/product')
   useStoreState.registerUser('121231', '21313')
 }
 </script>
